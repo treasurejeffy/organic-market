@@ -1,0 +1,693 @@
+@media  screen and (max-width: 699px) and (min-width: 200px) {
+    #linkes{
+        display: none;
+    }
+
+    #banner-img{
+        display: flex;
+        justify-content: end;
+    }
+
+    .flexContainer{
+        margin-bottom: 16px;
+    }
+
+    section#nav-contd  .container .form-inline{
+        margin-bottom: 20px;
+    }
+
+    #discountCards div.border{
+        margin: 5px 10px 5px ;
+    }
+
+    section#discountCards div#discountHeader{
+        display: flex;
+        justify-content: center;
+        margin: 5px 10px 5px;
+    }
+
+    section#discountCards div#discountHeader h3{
+        margin-left: 10px;
+    }
+
+    section#discountCards div#discountHeader {
+        padding: none;
+    }
+
+    #social-media{
+        display: block;
+    }
+
+    #social-media-links{
+        display: none;
+    }
+}
+
+#navbar{
+    background-color: #EDEDED;
+    box-shadow: 0 0 5px;
+}
+
+#logo{
+    height: 40px;
+}
+
+#links{
+    position: absolute;
+    right: 0px;
+}
+
+#link{
+    height: 20px;
+    padding-right: 3px;
+}
+
+#linke{
+    height: 20px;
+    padding-right: 60px;
+}
+
+.navbar-contd{
+    background-color: #EDEDED;
+    padding: 20px 0 2px;
+}
+
+.flexContainer {
+    display: flex;
+    border: none;
+    padding:7px 8px 7px;
+    background-color: #ffffff;
+}
+
+.flexContainer:focus-within { 
+    outline: 1px solid #49a79c ;
+}
+
+#input {
+    border: none;
+    flex-grow:2;
+    font-size: small;
+    width: auto;
+}
+
+#input:focus {
+    outline: none;
+    color: #989191;
+}
+
+.flexContainer button{
+    display: flex;
+    border: none;
+    background-color: #EDEDED;
+    color: #111;
+    font-weight: 730;
+    padding: 2px 8px 2px;
+    padding-right: 23px;
+}
+
+.flexContainer button img{
+    margin-top: 2px;
+    padding: 1px 8px 0;
+    font-weight: 900;
+}
+
+.ul{
+    margin-top: 10px;
+}
+
+.home{
+    color: #49a79c;
+    font-weight: 500;
+}
+
+#basic-nav-dropdown{
+    color: #111;
+    font-size: small;
+    font-weight: 570;
+}
+
+.ul .li{
+    color: #111;
+    font-size: small;
+    font-weight: 570;   
+}
+
+section#banner{
+    background-color: #fe7b31;
+    background: linear-gradient(to right,  #ff701d, #facc91); /*Standard*/
+    height: fit-content;
+}
+
+#bannerh1{
+    font-weight: 700;
+    margin: 98px 10px 10px;
+    color: #EDEDED;
+}
+
+#bannerp{
+    font-weight: 500;
+    color: #EDEDED;
+    margin: 0 10px 20px;
+}
+
+#bannerbtn{
+    font-weight: 500;
+    font-size: 20px;
+    color: #EDEDED;
+    background-color: #49a79c;
+    padding: 15px 40px 15px;
+    margin: 10px 10px 0;
+    border-radius: none;
+}
+
+#banner-img{
+    display: flex;
+    justify-content: center;
+}
+
+#descriptionBanner{
+    background-color: #EDEDED;
+    padding: 20px 10px 20px;
+}
+
+#satisfy div{
+    display: flex;
+}
+
+#satisfy div img{
+    height: 25px;
+    margin: 5px 10px 0;
+}
+
+#satisfy div #moneyimg{
+    height: 35px;
+}
+
+#satisfy div h6{
+    font-size: small;
+    font-weight: 600;
+}
+
+#satisfy p {
+    font-size: smaller;
+    margin: 0 12px 10px;
+}
+
+section#discountCards{
+    margin: 40px 10px 40px;
+}
+
+section#discountCards div#discountHeader{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 5px;
+}
+
+section#discountCards div#discountHeader h3{
+    font-weight: 680;
+}
+
+section#discountCards div#discountHeader h1{
+    position: relative;
+    bottom: 12px;
+    font-weight: 700;
+    color: #fe7b31;
+}
+
+#discountCards #Orange{
+   display: flex;
+}
+
+#discountCards #Orange .peppermint{
+    justify-content: flex-end;
+}
+
+#discountCards div.border{
+    box-shadow: 1px 1px 1px  gray;
+}
+
+#discountCards div.border #colimg{
+   display: flex;
+}
+
+#discountCards div.border #colimg #img{
+    justify-content: center;
+}
+
+#discountCards #Orange .weight {
+    font-weight: 630;
+}
+
+#discountCards #Orange .p{ 
+    font-weight: 700;
+    color: #a49696;
+} 
+
+#discountCards #Orange  p span{
+    font-weight: 700;
+    color: #49a79c;
+} 
+
+#discountCards #Orange button{
+    font-weight: 500;
+    color: #EDEDED;
+    background-color: #49a79c;
+    border: none;
+    padding: 6px 15px 6px;
+}
+
+#discountCards #Peppermint button{
+    font-weight: 500;
+    /* font-size: 17px; */
+    color: #EDEDED;
+    background-color: #49a79c;
+    border: none;
+    padding: 6px 15px 6px;
+}
+
+#organicProducts #organicProducts-header h3{
+    font-weight: 700;
+    color: #49a79c;
+    margin: 20px 5px 10px;
+}
+
+#organicProducts #organicProducts-header h3 span{
+    font-weight: 700;
+    color: #111;
+    margin: 0 10px 0;
+}
+
+#organicProducts #organicProducts-header h4{
+    font-weight: 650;
+    color: #111;
+    margin: 25px 0 0;
+}
+
+#organicProducts #organicProducts-header h4 #all{
+    font-weight: 650;
+    color: #49a79c;
+    margin: 0 23px 0;
+    border-bottom: #49a79c solid 5px;
+}
+
+#organicProducts #organicProducts-header h4 span{
+    font-weight: 650;
+    color: #111;
+    margin: 0 20px 0;
+}
+
+#organicProducts .group1 #card .card-header{
+    background-color: #ffffff;
+    border: none;
+    margin: 10px 5px 10px;
+}
+
+#organicProducts .group1 #card .favourite-img{
+   float: right;
+    padding: 6px 6px 6px;
+    height: 27px;
+    border-radius: 20px;
+    background-color: #EDEDED;
+
+}
+
+#organicProducts .group1 #card .card-title{
+    font-weight: 670;
+}
+
+#organicProducts .group1 #card #price{
+    font-weight: 700;
+    color: #49a79c;
+}
+
+#organicProducts .group1 #card #operator .minus{
+    cursor: pointer;
+    height: 30px;
+    color: #060606;
+    padding: 0 13px 2px;
+}
+
+#organicProducts .group1 #card #operator .plus{
+    cursor: pointer;
+    height: 30px;
+    color: #000000;
+    padding: 0 13px 2px;
+    margin: 0 5px 0;
+}
+
+#organicProducts .group1 #card .butn{
+    display: flex;
+    justify-content: center;
+}
+
+#organicProducts .group1 #card button{
+    width: fit-content;
+    border: #a49696 solid 1px;
+    padding: 2px 30px 2px;
+    margin:  30px 0 20px;
+    background-color: #338366;
+    color: #EDEDED;
+    font-weight: 700;
+}
+
+#organicProducts .group1 #card button #card-btn-img{
+    height: 36px;
+    padding: 0px 7px 0px;
+    margin:  0 0 4px;
+}
+
+#organicProducts .group2 #card .card-header{
+    background-color: #ffffff;
+    border: none;
+    margin: 10px 5px 10px;
+}
+
+#organicProducts .group2 #card .favourite-img{
+   float: right;
+    padding: 6px 6px 6px;
+    height: 27px;
+    border-radius: 20px;
+    background-color: #EDEDED;
+
+}
+
+#organicProducts .group2 #card .card-title{
+    font-weight: 670;
+}
+
+#organicProducts .group2 #card #price{
+    font-weight: 700;
+    color: #49a79c;
+}
+
+#organicProducts .group2 #card #operator .minus{
+    cursor: pointer;
+    height: 30px;
+    color: #060606;
+    padding: 0 13px 2px;
+}
+
+#organicProducts .group2 #card #operator .plus{
+    cursor: pointer;
+    height: 30px;
+    color: #000000;
+    padding: 0 13px 2px;
+    margin: 0 5px 0;
+}
+
+#organicProducts .group2 #card .butn{
+    display: flex;
+    justify-content: center;
+}
+
+#organicProducts .group2 #card button{
+    width: fit-content;
+    border: #a49696 solid 1px;
+    padding: 2px 30px 2px;
+    margin:  30px 0 20px;
+    background-color: #338366;
+    color: #EDEDED;
+    font-weight: 700;
+}
+
+#organicProducts .group2 #card button #card-btn-img{
+    height: 36px;
+    padding: 0px 7px 0px;
+    margin:  0 0 4px;
+}
+
+#organicProducts .group3 #card .card-header{
+    background-color: #ffffff;
+    border: none;
+    margin: 10px 5px 10px;
+}
+
+#organicProducts .group3 #card .favourite-img{
+   float: right;
+    padding: 6px 6px 6px;
+    height: 27px;
+    border-radius: 20px;
+    background-color: #EDEDED;
+
+}
+
+#organicProducts .group3 #card .card-title{
+    font-weight: 670;
+}
+
+#organicProducts .group3 #card #price{
+    font-weight: 700;
+    color: #49a79c;
+}
+
+#organicProducts .group3 #card #operator .minus{
+    cursor: pointer;
+    height: 30px;
+    color: #060606;
+    padding: 0 13px 2px;
+}
+
+#organicProducts .group3 #card #operator .plus{
+    cursor: pointer;
+    height: 30px;
+    color: #000000;
+    padding: 0 13px 2px;
+    margin: 0 5px 0;
+}
+
+#organicProducts .group3 #card .butn{
+    display: flex;
+    justify-content: center;
+}
+
+#organicProducts .group3 #card button{
+    width: fit-content;
+    border: #a49696 solid 1px;
+    padding: 2px 30px 2px;
+    margin:  30px 0 20px;
+    background-color: #338366;
+    color: #EDEDED;
+    font-weight: 700;
+}
+
+#organicProducts .group3 #card button #card-btn-img{
+    height: 36px;
+    padding: 0px 7px 0px;
+    margin:  0 0 4px;
+}
+
+#organicProducts  .view-all{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 36px;
+}
+
+#organicProducts  .view-all button{
+   border: #989191 solid 2px;
+   padding: 5px 30px 5px;
+   font-weight: 600;
+   margin: 0 0 30px;
+}
+
+#organicProducts  .view-all button:hover{
+    background-color: #338366;
+    color: #ffffff;
+    opacity: 0.4;
+}
+
+#WhatClientSays{
+    background-color: #EDEDED;
+    padding: 10px 10px 50px ;
+}
+
+#WhatClientSays .text-center h3{
+    font-weight: 700;
+    padding: 30px 0 0;
+}
+
+#WhatClientSays .text-center h3 span{
+    color: #338366;
+}
+
+#WhatClientSays .text-center p{
+    padding: 20px 0 10px;
+    font-size: 15px;
+}
+
+#WhatClientSays #client img{
+  height: 40px;  
+  background-color: #aaaa;
+  border-radius: 20px;
+}
+
+.drinks{
+    margin: 80px 0 0;
+}
+
+#drinks{
+    font-weight: 700;
+    padding: 10px 10px 10px;
+}
+
+#drinks-note{
+    font-weight: 400;
+    padding: 7px 10px 9px;
+}
+
+#btn-juice{
+    padding: 6px 20px 6px;
+    margin: 30px 10px 10px;
+    border: solid 1px;
+}
+
+#fast-note{
+    font-weight: 400;
+    padding: 3px 10px 9px;
+}
+
+#btn-fast{
+    padding: 6px 30px 6px;
+    margin: 30px 10px 10px;
+    border: solid 1px;
+}
+
+#news-blogs{
+    margin: 50px 0 20px;
+    background-color: #EDEDED;
+}
+
+#news-blogs-header{
+    padding: 48px 10px 10px;
+}
+
+#news-blogs-header h3{
+    font-weight: 700;
+    padding: 0 0 10px;
+}
+
+#news-blogs-header h3 span{
+    color: #338366;
+}
+
+#news-blogs-header p{
+    font-size: 14px;
+}
+
+#news-blogs #card-1{
+    background-color: #EDEDED;
+}
+
+#news-blogs #card-1 p{
+    margin: 10px 5px 10px ;
+}
+
+#news-blogs #card-1 h4{
+    margin: 6px 5px 10px ;
+    font-weight: 649.9;
+}
+
+#news-blogs #card-1 #date_comment{
+    display: flex;
+    padding-left: 7px;
+    margin: 17px 0 17px;
+}
+
+#news-blogs #card-1 #date_comment span{
+    font-size: 14px;
+}
+
+#news-blogs #card-1 #date_comment img{
+    height: 20px;
+    padding-right: 10px;
+}
+
+#news-blogs #card-1 #date_comment .imgs{
+    margin-left: 30px;
+}
+
+#news-blogs #card-1 #lorem{
+    font-size: 15px;
+}
+
+#news-blogs #card-1 a{
+    padding: 30px 7px 20px;
+    color: #338366;
+    font-weight: 600;
+}
+
+#news-blogs #view-all-btn button{
+    border: solid 1px;
+    padding: 7px 20px 7px;
+    font-weight: 500;
+    margin: 30px 0 40px;
+}
+
+#news-blogs #view-all-btn button:hover{
+    background-color: #338366;
+    color: #f5f3f3;
+    font-weight: 700;
+}
+
+#newsletter{
+    margin: 60px 0 40px;
+}
+
+#newsletter h3{
+    font-weight: 670;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 60px;
+}
+
+.flex {
+    width: auto ;
+    padding:1px 3px 1px;
+    background-color: #ffffff;
+    flex-direction:row;
+}
+
+.flex:focus-within { 
+    outline: 1px solid #49a79c ;
+}
+
+.inputfield {
+    border: none;
+    flex-grow:4;
+    font-size: 15px;
+    padding: 0 40px 0;
+}
+
+.inputfield:focus {
+    outline: none;
+    color: #989191;
+}
+
+.flex button{
+    background-color: #338366;
+    color: #EDEDED;
+    font-weight: 730;
+    padding: 5px 15px 5px;
+}
+
+#footer-note{
+    font-size: 13px;
+}
+
+
+#social-media-links a img{
+    height: 20px;
+}
+
+footer h6{
+    font-weight: 700;
+} 
+
+footer ul li{
+    list-style: none;
+    font-size: 13px;
+    font-weight: 470;
+    margin-top: 3px;
+}

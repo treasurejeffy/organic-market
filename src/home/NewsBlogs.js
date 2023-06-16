@@ -5,11 +5,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import './OrganicMarket.css';
-import img1 from "./images/clean.jpg";
-import img2 from "./images/cashnuts.jpeg";
-import img3 from "./images/read.jpg";
-import calender from "./images/calendar.png";
-import comment from "./images/comment.png";
+import img1 from "../images/clean.jpg";
+import img2 from "../images/cashnuts.jpeg";
+import img3 from "../images/read.jpg";
+import calender from "../images/calendar.png";
+import comment from "../images/comment.png";
 
 export default function NewsBlogs() {
     
@@ -28,8 +28,8 @@ export default function NewsBlogs() {
                                 <p>milk & clean vegetables</p>
                                 <h4>Cleansing The Broady Of Parasites</h4>
                                 <div id="date_comment">
-                                    <img src={calender}  class="img"/><span class="span">March 13,2023</span> 
-                                    <img src={comment} className="imgs"/><span class="span">3 comments</span>
+                                    <img src={calender}  className="img"/><span className="span">March 13,2023</span> 
+                                    <img src={comment} className="imgs"/><span className="span">3 comments</span>
                                 </div>
                                 <p id="lorem">Lorem ipsum dolor sit amet consectetur. Ipsum odio, quaerat quos Ipsum odio, quaerat quos voluptate dicta officia est sed vel accusantium omnis maiores suscipit ips???</p>
                                 <a href="#">Read More</a>
@@ -41,8 +41,8 @@ export default function NewsBlogs() {
                                 <p>milk & clean vegetables</p>
                                 <h4>Cleansing The Broady Of Parasites</h4>
                                 <div id="date_comment">
-                                    <img src={calender}  class="img"/><span class="span">March 13,2023</span> 
-                                    <img src={comment} className="imgs"/><span class="span">3 comments</span>
+                                    <img src={calender}  className="img"/><span className="span">March 13,2023</span> 
+                                    <img src={comment} className="imgs"/><span className="span">3 comments</span>
                                 </div>
                                 <p id="lorem">Lorem ipsum dolor sit amet consectetur. Ipsum odio, quaerat quos Ipsum odio, quaerat quos voluptate dicta officia est sed vel accusantium omnis maiores suscipit ips???</p>
                                 <a href="#">Read More</a>
@@ -54,8 +54,8 @@ export default function NewsBlogs() {
                                 <p>milk & clean vegetables</p>
                                 <h4>Cleansing The Broady Of Parasites</h4>
                                 <div id="date_comment">
-                                    <img src={calender}  class="img"/><span class="span">March 13,2023</span> 
-                                    <img src={comment} className="imgs"/><span class="span">3 comments</span>
+                                    <img src={calender}  className="img"/><span className="span">March 13,2023</span> 
+                                    <img src={comment} className="imgs"/><span className="span">3 comments</span>
                                 </div>
                                 <p id="lorem">Lorem ipsum dolor sit amet consectetur. Ipsum odio, quaerat quos Ipsum odio, quaerat quos voluptate dicta officia est sed vel accusantium omnis maiores suscipit ips???</p>
                                 <a href="#">Read More</a>

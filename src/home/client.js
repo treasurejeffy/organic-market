@@ -4,8 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './OrganicMarket.css';
-import client from "./images/client.jpg"
-import person from "./images/gender-neutral-user.png";
+import client from "../images/client.jpg"
+import person from "../images/gender-neutral-user.png";
 
 
 export default function ClientSays() {
@@ -25,7 +25,7 @@ export default function ClientSays() {
                         <Col lg={6} md={6} sm={12}>
                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, officia maiores? Magni eos doloribus quasi ut reprehenderit assumenda laboriosam non magnam, accusamus voluptatum vel repellat excepturi suscipit sit iusto ab, cupiditate iure iste ducimus quis molestias quisquam. Omnis perferendis adipisci reiciendis obcaecati voluptate optio quia eos ea, esse libero maiores. Expedita nisi, voluptas laboriosam sapiente aut quae! Vitae officia debitis voluptas, enim ullam veniam voluptates totam! Sequi commodi ipsa voluptatem rem in perspiciatis delectus repudiandae, cumque quasi dolorem aliquam unde.</p>
                              <div id="client">
-                                <img src={person}  alt="s"/> John Doe                               
+                                <img src={person} className="p-2"  alt="s"/> John Doe                               
                              </div>
                         </Col>
                     </Row>

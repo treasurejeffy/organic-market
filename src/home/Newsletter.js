@@ -13,8 +13,8 @@ export default function NewsLetters(params) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>                    
                 </div>
                 <div className="d-flex">
-                    <div class="flex border ">
-                        <input type="text" class="inputfield" placeholder="Type In Your Email Address"/>
+                    <div className="flex border ">
+                        <input type="text" className="inputfield" placeholder="Type In Your Email Address"/>
                         <button type="submit" className="border-0">Suscribe</button>
                     </div> 
                 </div>               

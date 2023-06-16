@@ -1,0 +1,57 @@
+#link{
+    height: 20px;
+}
+
+.margin{
+    position: absolute;
+    right: 0;
+    padding-right: 100px;
+}
+
+#favouriteBanner{
+    background: linear-gradient(to right, #facc91, #facc91,#facc91,#ff701d); 
+}
+
+.d-block{
+    height: 300px;
+    padding: 16px 0 10px;
+}
+
+.d-block:hover{
+   transform: scaleY(1.1); 
+}
+
+#favouriteCard:hover{
+    transform: scaleY(1.1);
+}
+
+#remove-btn{
+    opacity: 0.4;
+    font-weight: 700;
+    color: grey;
+}
+
+#remove-btn:hover{
+    opacity: 1;
+    color: white;
+}
+
+
+#footer-note{
+    font-size: 13px;
+}
+
+#social-media-links a img{
+    height: 20px;
+}
+
+footer h6{
+    font-weight: 700;
+} 
+
+footer ul li{
+    list-style: none;
+    font-size: 13px;
+    font-weight: 470;
+    margin-top: 3px;
+}

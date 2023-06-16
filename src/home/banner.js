@@ -4,16 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './OrganicMarket.css';
-import banner from "./images/banner 1.png"
-import satisfy from "./images/gear.png"
-import savewhen from  "./images/hearts.png"
-import shipping from  "./images/ship.png"
-import money from  "./images/send-money.png"
+import banner from "../images/banner 1.png"
+import satisfy from "../images/gear.png"
+import savewhen from  "../images/hearts.png"
+import shipping from  "../images/ship.png"
+import money from  "../images/send-money.png"
 
 export default class Banner extends React.Component{
-    constructor(props){
-        super(props)
-    }
+    
     render(){
       return( 
             <>

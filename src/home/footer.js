@@ -4,18 +4,18 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './OrganicMarket.css';
-import icon from "./images/icon.png"
-import img1 from "./images/facebook-new.png"
-import img2 from "./images/twitter--v3.png"
-import img3 from "./images/instagram-new.png"
-import img4 from "./images/linkedin.png"
+import icon from "../images/icon.png"
+import img1 from "../images/facebook-new.png"
+import img2 from "../images/twitter--v3.png"
+import img3 from "../images/instagram-new.png"
+import img4 from "../images/linkedin.png"
 
 export default function Footer() {
     
     return(
         <>
             <footer>
-                <Container>
+                <Container className="mb-4">
                     <Row>
                         <Col></Col>
                         <Col lg={2} md={3} sm={12} className="mt-3">
@@ -32,7 +32,7 @@ export default function Footer() {
                         </Col>
                         <Col lg={2} md={3} xs="6" className="mt-3">                        
                             <h6 className="text-center"> Company Info</h6>
-                            <ul class="mt-3">
+                            <ul className="mt-3">
                                 <li>Lorem, ipsum.</li>
                                 <li>Lorem, ipsum dolor.</li>
                                 <li>Lorem, ipsum.</li>
@@ -43,7 +43,7 @@ export default function Footer() {
                         </Col>
                         <Col lg={2} md={3} xs="6" className="mt-3">                        
                             <h6 className="text-center"> Quick Links</h6>
-                            <ul class="mt-3">
+                            <ul className="mt-3">
                                 <li>Lorem, ipsum.</li>
                                 <li>Lorem, ipsum dolor.</li>
                                 <li>Lorem, ipsum.</li>
@@ -54,7 +54,7 @@ export default function Footer() {
                         </Col>
                         <Col lg={2} md={3} xs="6" className="mt-3">                        
                             <h6 className="text-center"> Hot Categories</h6>
-                            <ul class="mt-3">
+                            <ul className="mt-3">
                                 <li>Lorem, ipsum.</li>
                                 <li>Lorem, ipsum dolor.</li>
                                 <li>Lorem, ipsum.</li>
@@ -65,7 +65,7 @@ export default function Footer() {
                         </Col>
                         <Col lg={2} md={3} xs="6" className="mt-3">                        
                             <h6 className="text-center"> Contact Us</h6>
-                            <ul class="mt-3">
+                            <ul className="mt-3">
                                 <li>Lorem, ipsum.</li>
                                 <li>Lorem, ipsum dolor.</li>
                                 <li>Lorem, ipsum.</li>

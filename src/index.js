@@ -1,9 +1,9 @@
 import React from 'react';
-import Home from './OrganicMarket';
+import Routeswitch from './router';
 import ReactDOM from 'react-dom/client';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Home/>
+    <Routeswitch/>
 );
 

@@ -17,13 +17,13 @@
     }
 
     #discountCards div.border{
-        margin: 5px 10px 5px ;
+        margin: 5px 0 5px ;
     }
 
     section#discountCards div#discountHeader{
         display: flex;
         justify-content: center;
-        margin: 5px 10px 5px;
+        margin: 5px 0px 5px;
     }
 
     section#discountCards div#discountHeader h3{
@@ -52,19 +52,31 @@
     height: 40px;
 }
 
-#links{
-    position: absolute;
-    right: 0px;
-}
-
 #link{
     height: 20px;
     padding-right: 3px;
 }
 
+#links{
+    position: fixed;
+    right: 0;
+}
+
 #linke{
     height: 20px;
-    padding-right: 60px;
+    margin-top: 4px;
+    margin-right: 80px;
+    border: 0.1px solid;
+    padding: 5px 8px 32px;
+    border-radius: 50px;
+}
+
+#linke #cartCount{
+    background-color: #fe7b31;
+    padding: 3px 9px 3px;
+    border-radius: 20px;
+    color: #EDEDED;
+    font-weight: 700;
 }
 
 .navbar-contd{
@@ -109,6 +121,7 @@
     margin-top: 2px;
     padding: 1px 8px 0;
     font-weight: 900;
+    height: 20px;
 }
 
 .ul{
@@ -214,18 +227,6 @@ section#discountCards div#discountHeader h1{
     color: #fe7b31;
 }
 
-#discountCards #Orange{
-   display: flex;
-}
-
-#discountCards #Orange .peppermint{
-    justify-content: flex-end;
-}
-
-#discountCards div.border{
-    box-shadow: 1px 1px 1px  gray;
-}
-
 #discountCards div.border #colimg{
    display: flex;
 }
@@ -250,15 +251,6 @@ section#discountCards div#discountHeader h1{
 
 #discountCards #Orange button{
     font-weight: 500;
-    color: #EDEDED;
-    background-color: #49a79c;
-    border: none;
-    padding: 6px 15px 6px;
-}
-
-#discountCards #Peppermint button{
-    font-weight: 500;
-    /* font-size: 17px; */
     color: #EDEDED;
     background-color: #49a79c;
     border: none;
@@ -296,13 +288,13 @@ section#discountCards div#discountHeader h1{
     margin: 0 20px 0;
 }
 
-#organicProducts .group1 #card .card-header{
+ #card-header{
     background-color: #ffffff;
     border: none;
     margin: 10px 5px 10px;
 }
 
-#organicProducts .group1 #card .favourite-img{
+ #card-header img{
    float: right;
     padding: 6px 6px 6px;
     height: 27px;
@@ -311,28 +303,28 @@ section#discountCards div#discountHeader h1{
 
 }
 
-#organicProducts .group1 #card .card-title{
+#card-header img:hover{
+    padding: 8px 8px 8px;
+    height: 30px;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #49a79c;
+}
+
+#card-title{
     font-weight: 670;
 }
 
-#organicProducts .group1 #card #price{
-    font-weight: 700;
+#card-price{
+    font-weight: 780;
     color: #49a79c;
 }
 
-#organicProducts .group1 #card #operator .minus{
+#operator .minus{
     cursor: pointer;
-    height: 30px;
     color: #060606;
-    padding: 0 13px 2px;
-}
-
-#organicProducts .group1 #card #operator .plus{
-    cursor: pointer;
-    height: 30px;
-    color: #000000;
-    padding: 0 13px 2px;
-    margin: 0 5px 0;
+    padding: 2px 13px 2px;
+    margin: 0 4px 0;
 }
 
 #organicProducts .group1 #card .butn{
@@ -340,140 +332,17 @@ section#discountCards div#discountHeader h1{
     justify-content: center;
 }
 
-#organicProducts .group1 #card button{
-    width: fit-content;
+Button.btn{
     border: #a49696 solid 1px;
-    padding: 2px 30px 2px;
-    margin:  30px 0 20px;
-    background-color: #338366;
+    margin: 0 0 10px;
+    background-color: #4cc196;
     color: #EDEDED;
     font-weight: 700;
 }
 
-#organicProducts .group1 #card button #card-btn-img{
+Button img{
     height: 36px;
     padding: 0px 7px 0px;
-    margin:  0 0 4px;
-}
-
-#organicProducts .group2 #card .card-header{
-    background-color: #ffffff;
-    border: none;
-    margin: 10px 5px 10px;
-}
-
-#organicProducts .group2 #card .favourite-img{
-   float: right;
-    padding: 6px 6px 6px;
-    height: 27px;
-    border-radius: 20px;
-    background-color: #EDEDED;
-
-}
-
-#organicProducts .group2 #card .card-title{
-    font-weight: 670;
-}
-
-#organicProducts .group2 #card #price{
-    font-weight: 700;
-    color: #49a79c;
-}
-
-#organicProducts .group2 #card #operator .minus{
-    cursor: pointer;
-    height: 30px;
-    color: #060606;
-    padding: 0 13px 2px;
-}
-
-#organicProducts .group2 #card #operator .plus{
-    cursor: pointer;
-    height: 30px;
-    color: #000000;
-    padding: 0 13px 2px;
-    margin: 0 5px 0;
-}
-
-#organicProducts .group2 #card .butn{
-    display: flex;
-    justify-content: center;
-}
-
-#organicProducts .group2 #card button{
-    width: fit-content;
-    border: #a49696 solid 1px;
-    padding: 2px 30px 2px;
-    margin:  30px 0 20px;
-    background-color: #338366;
-    color: #EDEDED;
-    font-weight: 700;
-}
-
-#organicProducts .group2 #card button #card-btn-img{
-    height: 36px;
-    padding: 0px 7px 0px;
-    margin:  0 0 4px;
-}
-
-#organicProducts .group3 #card .card-header{
-    background-color: #ffffff;
-    border: none;
-    margin: 10px 5px 10px;
-}
-
-#organicProducts .group3 #card .favourite-img{
-   float: right;
-    padding: 6px 6px 6px;
-    height: 27px;
-    border-radius: 20px;
-    background-color: #EDEDED;
-
-}
-
-#organicProducts .group3 #card .card-title{
-    font-weight: 670;
-}
-
-#organicProducts .group3 #card #price{
-    font-weight: 700;
-    color: #49a79c;
-}
-
-#organicProducts .group3 #card #operator .minus{
-    cursor: pointer;
-    height: 30px;
-    color: #060606;
-    padding: 0 13px 2px;
-}
-
-#organicProducts .group3 #card #operator .plus{
-    cursor: pointer;
-    height: 30px;
-    color: #000000;
-    padding: 0 13px 2px;
-    margin: 0 5px 0;
-}
-
-#organicProducts .group3 #card .butn{
-    display: flex;
-    justify-content: center;
-}
-
-#organicProducts .group3 #card button{
-    width: fit-content;
-    border: #a49696 solid 1px;
-    padding: 2px 30px 2px;
-    margin:  30px 0 20px;
-    background-color: #338366;
-    color: #EDEDED;
-    font-weight: 700;
-}
-
-#organicProducts .group3 #card button #card-btn-img{
-    height: 36px;
-    padding: 0px 7px 0px;
-    margin:  0 0 4px;
 }
 
 #organicProducts  .view-all{
@@ -489,10 +358,10 @@ section#discountCards div#discountHeader h1{
    margin: 0 0 30px;
 }
 
-#organicProducts  .view-all button:hover{
+#organicProducts  .view-all :hover{
     background-color: #338366;
-    color: #ffffff;
-    opacity: 0.4;
+    padding: 8px 36px 8px;
+    opacity: 0.6;
 }
 
 #WhatClientSays{
@@ -526,7 +395,7 @@ section#discountCards div#discountHeader h1{
 
 #drinks{
     font-weight: 700;
-    padding: 10px 10px 10px;
+    padding: 10px 10px 0;
 }
 
 #drinks-note{
@@ -536,8 +405,12 @@ section#discountCards div#discountHeader h1{
 
 #btn-juice{
     padding: 6px 20px 6px;
-    margin: 30px 10px 10px;
+    margin: 10px 10px 8px;
     border: solid 1px;
+}
+
+#header-fast-food{
+    margin-bottom: 10px;
 }
 
 #fast-note{
@@ -547,7 +420,7 @@ section#discountCards div#discountHeader h1{
 
 #btn-fast{
     padding: 6px 30px 6px;
-    margin: 30px 10px 10px;
+    margin: 10px 10px 10px;
     border: solid 1px;
 }
 
@@ -676,7 +549,6 @@ section#discountCards div#discountHeader h1{
     font-size: 13px;
 }
 
-
 #social-media-links a img{
     height: 20px;
 }
@@ -690,4 +562,14 @@ footer ul li{
     font-size: 13px;
     font-weight: 470;
     margin-top: 3px;
+}
+
+tr td span{
+    color: #a49696;
+    font-size: smaller;
+    font-weight: 600;
+}
+
+tr td img#cartImgs{
+    height: 40px;
 }

@@ -4,10 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './OrganicMarket.css';
-import drinks from "./images/orangebg 1.png"
+import drinks from "../images/orangebg 1.png"
 
 export default function OurDrinks() {
-    
+ 
     return(
         <>
             <Container >

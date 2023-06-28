@@ -22,6 +22,7 @@ import { useState } from 'react';
 export default function OrganicProducts(props) {
     let [items , setItems]=useState([]);
     let [ myProductStorage,setMyProductStorage]=useState([])
+    const myCart = props.myCart
 
 
     items = [
@@ -31,6 +32,7 @@ export default function OrganicProducts(props) {
             weight: '500 Gm',
             img:capsicum,
             quantity: 1,
+            id:'001'
         },
         {
             name:"Tomatoe",
@@ -38,6 +40,7 @@ export default function OrganicProducts(props) {
             weight: " 1 Kg",
             img:tomatoe,
             quantity: 1,
+            id:'002'
         },
         {
             name:"Onion",
@@ -45,6 +48,7 @@ export default function OrganicProducts(props) {
             weight:"1 Kg",
             img: onion,
             quantity: 1,
+            id:'003'
         },
         {
             name:'Lemon',
@@ -52,6 +56,7 @@ export default function OrganicProducts(props) {
             weight:"500 Gm",
             img: lemon,
             quantity: 1,
+            id:'004'
         },
         {
             name:   "strawberry",
@@ -59,27 +64,31 @@ export default function OrganicProducts(props) {
             weight: "500 Gm",
             img: strawberry,
             quantity: 1,
+            id:'005'
         },
         {
             name:   "Cauliflower",
             price:  12.00,
             weight: "500 Gm",
             quantity: 1,
-            img:cauliflower
+            img:cauliflower,
+            id:'006'
         },
         {
             name:  "Garlic",
             price:  32.00,
             weight: "1 Kg",
             quantity: 1,
-            img: garlic
+            img: garlic,
+            id:'007'
         },
         {
             name:   "Plum",
             price:  12.00,
             weight: "500 Gm",
             quantity: 1,
-            img:plum
+            img:plum,
+            id:'008'
         },
         {
             name: 'Kiwi',
@@ -87,27 +96,31 @@ export default function OrganicProducts(props) {
             weight: "1 Kg",
             quantity: 1,
             img: kiwi,
+            id:'009'
         },
         {
             name:   "Apple",
             price:  31.00,
             weight: "1 Kg",
             quantity: 1,
-            img: apple
+            img: apple,
+            id:'010'
         },
         {
             name: "Banana",
             price:  28.00,
             weight: "1 Kg",
             quantity: 1,
-            img: banana
+            img: banana,
+            id:'011'
         },
         {
             name:   "Grape",
             price:  26.00,
             quantity: 1,
             weight: "1 Kg",
-            img: grape
+            img: grape,
+            id:'012'
         }
     ]
 
@@ -127,10 +140,8 @@ export default function OrganicProducts(props) {
     };
     
     const handleClick = (clickedItem) => {
-        myProductStorage.push(clickedItem)
-        props.setMyCart(myProductStorage)
-    };
-    // console.log(myProductStorage)
+        props.setMyCart([...myCart,clickedItem])
+    }
     return(
         <>
            <Container id="organicProducts">
@@ -140,7 +151,7 @@ export default function OrganicProducts(props) {
                 </div>
                 <Row lg={4} md={2} sm={1} className='mt-5'>
                     {items.map((element,index,items)=>{                        
-                        return (<Card className="text-center px-2 rounded-0" key={items.name} >
+                        return (<Card className="text-center px-2 rounded-0" key={index} >
                             <Card.Header id='card-header'><img src={favourites} alt='favourite' title='Favourite'  onClick={() => handleFavourite(element)} /></Card.Header>
                             <Card.Img variant="top" src={element.img} className="img-fluid" alt="img-fliud" />
                             <Card.Title id='card-title'>{element.name}</Card.Title>

@@ -9,15 +9,7 @@ import NewsLetters from "./Newsletter";
 import Footer from "./footer"
 import OrganicProducts from "./product"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Table from 'react-bootstrap/Table';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
+import {Button, Container, Navbar, NavDropdown, Nav, Row, Col, Form, Modal, Table} from 'react-bootstrap'
 import './OrganicMarket.css';
 import logo from "../images/logo.svg";
 import navlink1 from "../images/gender-neutral-user.png";
@@ -25,7 +17,7 @@ import navlink2 from "../images/appointment-reminders.png";
 import navlink3 from "../images/hearts.png";
 import navlink4 from "../images/shopping-cart.png";
 import inputsearch from "../images/search.png";
-import { useMemo } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -33,23 +25,17 @@ export default function Home() {
 
     const [show, setShow] = useState(false);
     let [myCart, setMyCart] = useState([]);
-    let [cart,setCart] = useState(0);
     let [ subtotal,setSubtotal] = useState();
-    let [ calTotal,setcalTotal] = useState(0);
-
-    // myCart= JSON.parse(localStorage.getItem('myItems'))
-    let numCart =myCart.length
-
-    useEffect=() => {
-        setCart(myCart.length)
-    };
-    
-    useMemo(()=>{
+    let [ calTotal,setcalTotal] = useState(0)
+     
+    useEffect(()=>{
         setShow(false)
-    },[setShow])
+    },[false])
    
-
-      console.log(myCart)
+    const handleCheckOut = () => {
+        setShow(false)
+        sessionStorage.setItem('checkOut', JSON.stringify(myCart))
+    }
    return(
         <>
             <Navbar expand="lg" sticky="top" id="navbar">
@@ -61,7 +47,7 @@ export default function Home() {
                             <Nav.Link href="#/about" title="You"><img src={navlink1} alt="link" id="link"/></Nav.Link>
                             <Nav.Link href="#link" title="Notification"><img src={navlink2} alt="link" id="link"/></Nav.Link>
                             <Nav.Link href="./favourite"title="Favourite Items"><img src={navlink3} alt="link" id="link"/></Nav.Link>
-                            <Nav.Link href="#link" title="Cart" onClick={() => setShow(true)} id="linke"><img src={navlink4} alt="link" id="link"/><span id="cartCount">{cart}</span></Nav.Link>
+                            <Nav.Link href="#link" title="Cart" onClick={() => setShow(true)} id="linke"><img src={navlink4} alt="link" id="link"/><span id="cartCount">{myCart.length}</span></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -120,8 +106,8 @@ export default function Home() {
                 </Container>
             </div>
             <Banner/>
-            <DiscountCards/>
-            <OrganicProducts setMyCart={setMyCart} />
+            <DiscountCards setMyCart={setMyCart} myCart={myCart}/>
+            <OrganicProducts setMyCart={setMyCart} myCart={myCart} />
             <ClientSays/>
             <OurDrinks/>
             <FastFood/>
@@ -154,15 +140,16 @@ export default function Home() {
                                 <tr>
                                     <td>{element.name} <img src={element.img} alt="item img" id="cartImgs"/> </td>
                                     <td>{element.weight}</td>
-                                    <td>${element.price} <span>x{element.quantity}</span> .00</td>
+                                    <td>${element.price}.00<span> x{element.quantity}</span></td>
                                     <td> ${subtotal= element.price * element.quantity}.00</td>  
-                                    <tr className="d-none">{calTotal += subtotal} </tr>
+                                    <td className="d-none">{calTotal += subtotal} </td>
                                 </tr> 
                             </tbody>)
                     })}  
                 </Table> 
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-center m-0 text-mu">Total:  $ {calTotal}.00</Modal.Footer>
+                <Modal.Footer><Button  variant="outline-success" onClick={()=> handleCheckOut ()} ><Link to={'/checkOut'}> Check Out </Link></Button></Modal.Footer>
             </Modal>
         </>
     )

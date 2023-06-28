@@ -1,0 +1,48 @@
+.banner{
+    background: linear-gradient(to top,  #ff701d, #facc91); /*Standard*/
+    height: 87vh;
+}
+
+.banner h3{
+    font-weight: 700;
+}
+
+.banner img{
+   height: 370px;
+   width: fit-content;
+   animation-name: bannerImg;
+   animation-duration: 10s;
+   animation-delay: 1s 30ms;
+   animation-iteration-count: 5;
+}
+
+@keyframes bannerImg {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+td img#checkoutImgs{
+    height: 50px;
+}
+
+.form-description{
+    font-weight: 580;
+}
+
+.form-header{
+    animation-name: formHeader;
+    animation-duration: 10s;
+    animation-delay: 1s 30ms;
+    animation-iteration-count: 7;
+    padding: 0 0 20px;
+    text-shadow: 1px 1px green;
+}
+
+@keyframes formHeader {
+    from {color: rgb(49, 216, 49);}
+    to {color: yellow;}
+}
+
+.select{
+    width: max-content;
+}

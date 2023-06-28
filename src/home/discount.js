@@ -9,9 +9,11 @@ import oranges from "../images/orange.png";
 import peppermints from "../images/peppermint (2).png"
 
 
-export default function DiscountCards () {
+export default function DiscountCards (props) {
     let [productDiscount,setproductDiscount]=useState([]);
     let [discount,setDiscount]=useState([]);
+
+    const myCart =props.myCart
 
     discount=[       
         {
@@ -35,9 +37,7 @@ export default function DiscountCards () {
     let myDiscount=[]
 
     const handleClick=(discountItem)=>{
-        console.log(discountItem);            
-        myDiscount.push(discountItem)
-        localStorage.setItem('myItems',JSON.stringify(myDiscount))
+        props.setMyCart([...myCart, discountItem])
     }
 
     return(

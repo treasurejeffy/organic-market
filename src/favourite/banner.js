@@ -19,7 +19,7 @@ export default function BannerFavourite() {
                 </Row>
                 <Row>
                     <Col>
-                    <Carousel className="d-flex mb-3">
+                    <Carousel>
                     <h3 className="banner-header text-center">See All Your Favourites Posters/Movies</h3>
                     <Carousel.Item className="d-flex">
                         <img
@@ -50,7 +50,7 @@ export default function BannerFavourite() {
                     </Carousel.Item>
                     <Carousel.Item >            
                         <img
-                        className="d-block w-100 img-fluid"
+                        className="d-block  img-thumbnail"
                         src={bannerImg}
                         alt="First slide"
                         />

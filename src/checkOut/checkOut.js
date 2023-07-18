@@ -1,63 +1,53 @@
 import React, { useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import{Navbar, Col, Container, Row, Nav,  Table, Form, Button, Carousel} from 'react-bootstrap'
+import{Navbar, Col, Container, Row, Nav,  Table, Form, Button, Carousel, Modal} from 'react-bootstrap'
 import navlink1 from "../images/gender-neutral-user.png";
 import navlink2 from "../images/appointment-reminders.png";
 import logo from "../images/logo.svg";
-import icon from "../images/icon.png"
-import img1 from "../images/facebook-new.png"
-import img2 from "../images/twitter--v3.png"
-import img3 from "../images/instagram-new.png";
-import img4 from "../images/linkedin.png";
 import bannerimg from '../images/checkout2.jpg';
 import bannerimg2 from '../images/checkout3.jpg';
 import bannerimg3 from '../images/checkout4.jpg';
 import './checkOut.css'
+import { Link } from "react-router-dom";
 
 export default function CheckOut() {
     let [checkOut,setCheckOut] = useState(JSON.parse(sessionStorage.getItem('checkOut')))
     let [ subtotal,setSubtotal] = useState();
+    const [show,setShow] = useState(false)
     let [ calTotal,setcalTotal] = useState(0)
     let  [ data, setData] = useState([])
-    let  [ gender, setGender] = useState('')
-
-    const inputElementName=useRef(null);
-    const inputElementSurname=useRef(null);
-    const inputElementAddress=useRef(null);  
-    const inputElementPhoneNo=useRef(null);     
+    const  [ name, setName] = useState('')
+    const  [ surname, setSurname] = useState('')
+    const  [ address, setAddress] = useState('')
+    const  [ phoneNo, setPhoneNo] = useState()
+    const  [ gender, setGender] = useState('')
+       
 
     const handleSumbit = () =>{
-        const name =inputElementName.current.value;
-        const surname =inputElementSurname.current.value;
-        const address =inputElementAddress.current.value;
-        const PhoneNumber =inputElementPhoneNo.current.value;
-        const genders = gender
-        console.log(name)
-        data.push(name,surname,address,PhoneNumber,genders)
-    alert(data)
+        data.push(name,surname,address,phoneNo,gender)
+         setShow(true)
+         console.log(data)
     }
     console.log(data)
     return(
         <>
             <Navbar expand="lg" sticky="top" id="navbar">
                 <Container>                
-                    <Navbar.Brand href="#home"><img src={logo} alt="logo" id="logo"/></Navbar.Brand>
+                    <Navbar.Brand href="#home"><Link to={'/'}><img src={logo} alt="logo" id="logo"/></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 outline-none"/>
-                    <Navbar.Collapse id="basic-navbar-nav" className="me-auto"  >
-                        <Nav className=" margin">
-                            <Nav.Link href="./" title="You"><img src={navlink1} alt="link" id="link"/></Nav.Link>
-                            <Nav.Link href="#link" title="Notification"><img src={navlink2} alt="link" id="link"/></Nav.Link>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav>
                         </Nav>
                     </Navbar.Collapse>                   
                 </Container>
             </Navbar>   
             <section className="banner">
-                <Container className="text-center">
-                    <div className="pt-4">
+                <Container className="text-center pb-5">
+                    <div className="pt-5">
                         <h3 className="pb-3"><b>check Out Your Items <br/> Here!</b></h3>
                         <Carousel>
                             <Carousel.Item>
-                                <img src={bannerimg} alt="bannerimg" className="img-thumbnail"/>
+                                <img src={bannerimg} alt="bannerimg" className="img-thumbnail "/>
                             </Carousel.Item><Carousel.Item>
                                 <img src={bannerimg2} alt="bannerimg" className="img-thumbnail"/>
                             </Carousel.Item><Carousel.Item>
@@ -69,127 +59,85 @@ export default function CheckOut() {
             </section> 
             <h4  className="mt-3 mb-4 text-center dark "><strong>Check It Out!</strong></h4> 
             <Container>
-                <Table className="table table-strip text-center">
-                    <thead>
-                        <tr>
-                            <th><b>Item</b></th>
-                            <th><b>Name</b></th>
-                            <th><b>Price</b></th>
-                            <th><b>Weight</b></th>
-                            <th><b>Id</b></th>
-                        </tr>
-                    </thead>
-                    {checkOut ? (checkOut.map((myCheckOutItem,index,checkOut)=>{
-                        return(
-                          <tbody key={index}>
-                            <tr>
-                                <td ><img src={myCheckOutItem.img} alt="mycheckoutImg" id="checkoutImgs" /></td>
-                                <td><b className="text-success">{myCheckOutItem.name}</b></td>
-                                <td><b className="text-muted">$ {subtotal= myCheckOutItem.price * myCheckOutItem.quantity }.00</b></td>
-                                <td><b className="text-primary">{myCheckOutItem.weight}</b></td>
-                                <td><b className="text-secondary">{myCheckOutItem.id}</b></td>
-                                <td className="d-none">{calTotal += subtotal}</td>
-                            </tr>
-                          </tbody>  
-                        )
-                    })) : (<div><p className="text-center-danger">Your checkOut cart is empty!</p></div>)}
-                </Table>
-                <div className="text-center mb-4"><strong>Total: ${calTotal}.00</strong></div>
-              <h4  className="mt-5 mb-3 text-center form-description "><b>Fill Up Now For Shipping!</b></h4> 
-                <Form className="text-center bg-secondary p-4 pt-5 m-4 mb-5 rounded-2">
-                    <h6 className="form-header"><b>Fill This Form For Successful Shipping!</b></h6>
-                    <Row lg={2} md={2} sm={1} xs={1}>
-                        <Col>
-                            <Form.Label><b>Name:</b></Form.Label>
-                            <Form.Control placeholder="Enter Your Name:" type="text" required ref={inputElementName}></Form.Control>
-                        </Col>
-                        <Col>
-                            <Form.Label><b>Surname:</b></Form.Label>
-                            <Form.Control placeholder="Enter Your Surname:" type="text" required ref={inputElementSurname}></Form.Control>
-                        </Col>
-                        <Col className="mt-2">
-                            <Form.Label><b>Address:</b></Form.Label>
-                            <Form.Control placeholder="Enter Your Location Address:" type="text" required ref={inputElementAddress}></Form.Control>
-                        </Col>
-                        <Col className="mt-2">
-                            <Form.Label><b>PhoneNumber:</b></Form.Label>
-                            <Form.Control placeholder="Enter Your PhoneNumber:" type="number" required ref={inputElementPhoneNo}></Form.Control>
-                        </Col>
-                    </Row>
-                    <Form.Label className="mt-2"><b>Gender:</b></Form.Label>
-                    <div className="d-flex mb-2">
-                        <Form.Select title="Gender" className="select" required onChange={(e) => setGender(e.target.value)}>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Custom</option>
-                        </Form.Select>
-                    </div>
-                    <Button variant="outline-success" onClick={() => handleSumbit ()}>Done</Button>
-                </Form>
+                <Row xl={2} lg={2} md={1} sm={1} xs={1}> 
+                    <Col>
+                        <section className="table-responsive mt-3">
+                            <h4 className="text-center myItem mb-2">My Items</h4>
+                            <Table className="table">                               
+                                {checkOut ? (checkOut.map((myCheckOutItem,index,checkOut)=>{
+                                    return(
+                                    <tbody key={index}>
+                                        <tr>
+                                            <td ><img src={myCheckOutItem.img} alt="mycheckoutImg" id="checkoutImgs" /></td>
+                                            <td><b className="text-secondary">{myCheckOutItem.name}</b></td>
+                                            <td><b className="text-secondary">$ {subtotal= myCheckOutItem.price * myCheckOutItem.quantity }.00</b></td>
+                                            <td><b className="text-secondary">{myCheckOutItem.weight}</b></td>
+                                            <td><b className="text-secondary">{myCheckOutItem.id}</b></td>
+                                            <td className="d-none">{calTotal += subtotal}</td>
+                                        </tr>
+                                    </tbody>  
+                                    )
+                                })) : (<div><p className="text-center-danger">Your checkOut cart is empty!</p></div>)}
+                            </Table>
+                        </section>
+                        <div className="text-center mb-4"><strong>Total: ${calTotal}.00</strong></div>
+                    </Col>
+                    <Col>
+                        <h4  className="mt-3 mb-3 text-center form-description ">Fill Up Now For Shipping!</h4> 
+                        <section className="d-flex">
+                            <Form className="myform px-4 py-3 mb-2 rounded-2 w-75" >
+                                <Row lg={2} md={2} sm={1} xs={1} className="mt-4">
+                                    <Col>
+                                        <Form.Label><b className="text-darks px-2">Name:</b></Form.Label>
+                                        <Form.Control placeholder="Enter Your Name:" type="text" required onChange={(e) => setName(e.target.value)} className="input"></Form.Control>
+                                    </Col>
+                                    <Col className="mt">
+                                        <Form.Label><b className="text-darks px-2 ">Surname:</b></Form.Label>
+                                        <Form.Control placeholder="Enter Your Surname:" type="text" required onChange={(e) => setSurname(e.target.value)} className="input"></Form.Control>
+                                    </Col>
+                                    <Col className="mt-3">
+                                        <Form.Label><b className="text-darks px-2">Address:</b></Form.Label>
+                                        <Form.Control placeholder="Enter Your Location Address:" type="text" required onChange={(e) => setAddress(e.target.value)} className="input"></Form.Control>
+                                    </Col>
+                                    <Col className="mt-3">
+                                        <Form.Label><b className="text-darks px-2">PhoneNumber:</b></Form.Label>
+                                        <Form.Control placeholder="Enter Your PhoneNumber:" type="number" required onChange={(e) => setPhoneNo(e.target.value)} className="input"></Form.Control>
+                                    </Col>
+                                </Row>
+                                <div className="text-center">
+                                    <Form.Label className="mt-4 gender"><b>Gender:</b></Form.Label>
+                                    <div className="d-flex mb-2">
+                                        <Form.Select  className="select" required onChange={(e) => setGender(e.target.value)}>
+                                            {/* <option>Gender</option>*/}
+                                            <option>Female</option>
+                                            <option>Male</option>
+                                            <option>Custom</option>
+                                        </Form.Select>
+                                    </div>
+                                    <Button variant="outline-success" className="px-5 bg-success mt-3 py-2 " onClick={() => handleSumbit ()}>Done</Button>
+                                </div>
+                            </Form>
+                        </section>
+                    </Col>
+                </Row>
             </Container>
             <hr/>
             <footer>
-                <Container className="mb-4">
-                    <Row>
-                        <Col></Col>
-                        <Col lg={2} md={3} sm={12} className="mt-3">
-                            <div className="d-flex justify-content-center m-0">
-                                <img src={icon} alt="logo" height={70} className=""/>
-                            </div>
-                            <p id="footer-note">Lorem ipsum dolor sit, amet consectetur adipisicing elit. voluptatem vel cupiditate architecto necessitatibus rem numquam?</p>
-                            <div id="social-media-links" className="d-flex justify-content-center m-0">
-                                <a href="https://facebook.com"><img src={img1} alt="our facebook-page" className="px-1"/></a>
-                                <a href="https://twitter.com"><img src={img2} alt="our twitter-handle" className="px-1"/></a>
-                                <a href="https://instagram.com"><img src={img3} alt="our instagram-handle" className="px-1"/></a>
-                                <a href="https://linkedin.com"><img src={img4} alt="our linkedln-handle" className="px-1"/></a>
-                            </div>
-                        </Col>
-                        <Col lg={2} md={3} xs="6" className="mt-3">                        
-                            <h6 className="text-center"> Company Info</h6>
-                            <ul className="mt-3">
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                            </ul>
-                        </Col>
-                        <Col lg={2} md={3} xs="6" className="mt-3">                        
-                            <h6 className="text-center"> Quick Links</h6>
-                            <ul className="mt-3">
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                            </ul>
-                        </Col>
-                        <Col lg={2} md={3} xs="6" className="mt-3">                        
-                            <h6 className="text-center"> Hot Categories</h6>
-                            <ul className="mt-3">
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                            </ul>
-                        </Col>
-                        <Col lg={2} md={3} xs="6" className="mt-3">                        
-                            <h6 className="text-center"> Contact Us</h6>
-                            <ul className="mt-3">
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum dolor.</li>
-                                <li>Lorem, ipsum.</li>
-                                <li>Lorem, ipsum.</li>
-                            </ul>
-                        </Col>
-                        <Col></Col>
-                    </Row>
-                </Container>
+                <p className="text-center">copyRight@ 2023!</p>
             </footer>
+            <Modal show={show} onHide={() => setShow(false)} dialogClassName="modal-100w" aria-labelledby="example-modal-styling-title">
+                <Modal.Header closeButton className="secondary">
+                <Modal.Title id="example-custom-modal-styling-title" className="text-center">
+                    <b className="nameofmodel">Hi {name.toUpperCase()} {surname.toUpperCase()}</b>
+                </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {data ? (<p> <b>Thank you for your patronige, Pls remember that your goods will be delivered to you tomorrow morning and you will be called with this number ({phoneNo}) immediately we reach to this distination ({address})</b></p>) : ('fill it up') }
+                </Modal.Body>
+                <Modal.Footer>
+                    <Link to={'/'} className="okbtn"><Button className="btnmodel" > OK</Button></Link>
+                </Modal.Footer>
+            </Modal>
         </>
     )
 }

@@ -16,7 +16,7 @@ export default function ClientSays() {
                 <Container>
                     <div className="text-center">
                         <h3> <span>CLIENT</span> SAYS</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis delectus ducimus itaque amet quis blanditiis,<br/>  sit amet consectetur adipisicing elit. Officiis delectus ducimus.</p>                        
+                        <p className="pb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis delectus ducimus itaque amet quis blanditiis,<br/>  sit amet consectetur adipisicing elit. Officiis delectus ducimus.</p>                        
                     </div>
                     <Row >
                         <Col lg={6} md={6} sm={12}>

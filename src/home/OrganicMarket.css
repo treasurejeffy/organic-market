@@ -57,9 +57,12 @@
     padding-right: 3px;
 }
 
-#links{
-    position: fixed;
-    right: 0;
+@media screen and (min-width: 1308px) and (max-width: 1450px){
+    /* For desktop: */
+    #links{
+        position: fixed;
+        right: 0;
+    }
 }
 
 #linke{
@@ -69,6 +72,7 @@
     border: 0.1px solid;
     padding: 5px 8px 32px;
     border-radius: 50px;
+    width: fit-content;
 }
 
 #linke #cartCount{
@@ -164,13 +168,17 @@ section#banner{
 }
 
 #bannerbtn{
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 800;
     color: #EDEDED;
     background-color: #49a79c;
     padding: 15px 40px 15px;
     margin: 10px 10px 0;
     border-radius: none;
+}
+
+#bannerbtn .link{
+    text-decoration: none;
+    color: #EDEDED;
 }
 
 #banner-img{
@@ -261,6 +269,7 @@ section#discountCards div#discountHeader h1{
     font-weight: 700;
     color: #49a79c;
     margin: 20px 5px 10px;
+    cursor: pointer;
 }
 
 #organicProducts #organicProducts-header h3 span{
@@ -273,6 +282,7 @@ section#discountCards div#discountHeader h1{
     font-weight: 650;
     color: #111;
     margin: 25px 0 0;
+    cursor: pointer;
 }
 
 #organicProducts #organicProducts-header h4 #all{
@@ -280,11 +290,13 @@ section#discountCards div#discountHeader h1{
     color: #49a79c;
     margin: 0 23px 0;
     border-bottom: #49a79c solid 5px;
+    cursor: pointer;
 }
 
 #organicProducts #organicProducts-header h4 span{
     font-weight: 650;
     color: #111;
+    cursor: pointer;
     margin: 0 20px 0;
 }
 
@@ -295,12 +307,16 @@ section#discountCards div#discountHeader h1{
 }
 
  #card-header img{
-   float: right;
+    float: right;
     padding: 6px 6px 6px;
     height: 27px;
     border-radius: 20px;
     background-color: #EDEDED;
 
+}
+
+#myproductImgs{
+    height: 250px;
 }
 
 #card-header img:hover{
@@ -565,11 +581,37 @@ footer ul li{
 }
 
 tr td span{
-    color: #a49696;
     font-size: smaller;
     font-weight: 600;
+    cursor: pointer;
 }
 
 tr td img#cartImgs{
-    height: 40px;
+    height: 30px;
+}
+
+thead  tr.myCarthead th b{
+    font-weight: bolder;
+    font-size: x-large;
+    color: red;
+    text-shadow: 1px 1px black;
+}
+
+tr.myCart td b{
+    color: red;
+    border: red 1px solid;
+    padding: 2px 8px 3px;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 14px;
+}
+
+tr.myCart td b:hover{
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+}
+
+.checkoutBtn{
+    text-decoration: none;
 }

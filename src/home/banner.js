@@ -9,6 +9,7 @@ import satisfy from "../images/gear.png"
 import savewhen from  "../images/hearts.png"
 import shipping from  "../images/ship.png"
 import money from  "../images/send-money.png"
+import { Link } from "react-router-dom";
 
 export default class Banner extends React.Component{
     
@@ -22,7 +23,7 @@ export default class Banner extends React.Component{
                                    <div>
                                        <h2 className="" id="bannerh1">Healthy Food, Vegetables & Organic Market</h2>
                                        <p className="mt-2" id="bannerp">All Natural Products</p>
-                                       <button className="mt-3 border-0" id="bannerbtn">Shop Now</button>
+                                        <button className="mt-3 border-0" id="bannerbtn"> <a className="link" href="#"> Shop Now </a></button>
                                    </div>
                                </Col>
                                <Col lg={6} md={6} sm={12}>

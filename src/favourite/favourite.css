@@ -2,10 +2,13 @@
     height: 20px;
 }
 
-.margin{
-    position: absolute;
-    right: 0;
-    padding-right: 100px;
+@media screen and (min-width: 1308px) and (max-width: 1450px){
+    /* For desktop: */
+    .margin{
+        position: fixed;
+        right: 0;
+        margin-right: 120px;
+    }
 }
 
 #favouriteBanner{
@@ -22,20 +25,12 @@
 }
 
 #favouriteCard:hover{
-    transform: scaleY(1.1);
+    transform: scaleY(1);
 }
 
-#remove-btn{
-    opacity: 0.4;
-    font-weight: 700;
-    color: grey;
+#remove-btns{
+    float: right;
 }
-
-#remove-btn:hover{
-    opacity: 1;
-    color: white;
-}
-
 
 #footer-note{
     font-size: 13px;

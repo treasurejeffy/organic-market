@@ -32,7 +32,7 @@ export default function NewsBlogs() {
                                     <img src={comment} className="imgs"/><span className="span">3 comments</span>
                                 </div>
                                 <p id="lorem">Lorem ipsum dolor sit amet consectetur. Ipsum odio, quaerat quos Ipsum odio, quaerat quos voluptate dicta officia est sed vel accusantium omnis maiores suscipit ips???</p>
-                                <a href="#">Read More</a>
+                                <a href=".discount">Read More</a>
                             </Card>
                         </Col>
                         <Col lg={4} md={4} sm={12}>

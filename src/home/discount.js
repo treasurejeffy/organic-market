@@ -17,19 +17,19 @@ export default function DiscountCards (props) {
 
     discount=[       
         {
-            id:1,
+            id:'01',
             name:'Orange',
             img:oranges,
             price: 16,
-            weight:'500 Gm',
+            weight:[500, ' Gm'],
             quantity:1
         },
         {
-            id:2,
+            id:'02',
             name:'Peppermint',
             img:peppermints,
             price: 16,
-            weight:'800 Gm',
+            weight:[800, ' Gm'],
             quantity:1
         }
     ] 
